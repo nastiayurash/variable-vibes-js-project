@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'Inter Tight', serif;
+  src: url(../fonts/InterTight-Medium.ttf) format('ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Inter Tight', serif;
+  src: url(../fonts/InterTight-SemiBold.ttf) format('ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter Tight', serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  background-color: #1c1d20;
+  margin: 0 auto;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+  font-family: inherit;
+  color: currentColor;
+}
+h1 {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 500;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul,
+ol {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+picture {
+  flex-shrink: 0;
+  max-width: 100%;
+}
+input {
+  font-family: inherit;
+}
+
+.hidden {
+  display: none;
+}
