@@ -1,0 +1,73 @@
+.covers-header {
+  display: none;
+}
+
+.marquee {
+  max-width: 100%;
+
+  overflow: hidden;
+  background-image: url(../img/covers/bg-img1x.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.covers-section {
+  position: relative;
+  margin-bottom: 164px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.covers-list {
+  display: flex;
+  gap: 30px;
+  transform: rotate(-16deg);
+  margin-top: 30px;
+}
+
+.covers-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 260px;
+  height: 160px;
+}
+.animation {
+  animation-name: slideLine;
+  animation-duration: 9s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slideLine {
+  0% {
+    transform: translateX(-150px);
+  }
+  50% {
+    transform: translateX(-520px);
+  }
+  100% {
+    transform: translateX(-150px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .covers-slide {
+    max-width: 544px;
+    height: 314px;
+  }
+  .covers-section {
+    margin-bottom: 96px;
+    height: 960px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .covers-slide {
+    width: 640px;
+  }
+  .covers-section {
+    margin-bottom: 164px;
+    height: 960px;
+  }
+}
