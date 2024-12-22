@@ -14,7 +14,7 @@
 .marquee {
   max-width: 100%;
   overflow: hidden;
-  background-image: url(/src/img/covers/bg-img1x.png);
+  background-image: url(../img/covers/bg-img1x.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
