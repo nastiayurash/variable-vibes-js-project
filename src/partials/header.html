@@ -1,1 +1,97 @@
+<header class="page-header">
+  <div class="header-container">
+    <div class="logo-container">
+      <a href="./index.html">
+        <picture>
+          <source
+            srcset="./img/header/logo1px.jpg 1x, ./img/header/logo2px.jpg 2x"
+            width="80"
+            height="80"
+          />
+          <img src="./img/header/logo1px.jpg" alt="profile-picture" />
+        </picture>
+      </a>
 
+      <a class="logo" href="./index.html">jefferson*</a>
+    </div>
+    <a class="menu-link" href="">Menu</a>
+    <a class="header-button" href="#footer">Order the project</a>
+    <button class="menu-button" type="button" id="openButton">
+      <svg
+        class="icon-menu"
+        width="28"
+        height="28"
+        aria-label="mobile menu open icon"
+      >
+        <use href="./img/icons.svg#icon-menu"></use>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+
+<div class="mobile-menu-wrapper">
+  <div class="container mobile-menu-container">
+    <button class="mobile-menu-close-btn" type="button">
+      <svg
+        class="mobile-menu-close-btn-icon"
+        width="28"
+        height="28"
+        aria-label="mobile menu close icon"
+      >
+        <use href="./img/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+    <nav class="mobile-menu-navigation">
+      <ul class="list mobile-menu-list">
+        <li class="mobile-menu-item">
+          <a class="link mobile-menu-link mobile-aboutme" href="#btn-about"
+            >About me</a
+          >
+        </li>
+        <li class="mobile-menu-item">
+          <a class="link mobile-menu-link" href="#benefits">Benefits</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="link mobile-menu-link" href="#projects">Projects</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="link mobile-menu-link" href="#faq">FAQ</a>
+        </li>
+      </ul>
+    </nav>
+    <a class="mobile-order-button" href="#footer">Order the project</a>
+  </div>
+</div>
+
+<!-- TABLET AND DESKTOP MENU NAVIGATION -->
+
+<div class="tablet-and-desktop-menu-navigation-wrapper">
+  <nav class="tablet-and-desktop-menu-navigation">
+    <ul class="list tablet-and-desktop-menu-list">
+      <li class="tablet-and-desktop-menu-item">
+        <a
+          class="link tablet-and-desktop-menu-link mobile-aboutme"
+          href="#btn-about"
+          >About me</a
+        >
+      </li>
+      <li class="tablet-and-desktop-menu-item">
+        <a class="link tablet-and-desktop-menu-link" href="#benefits"
+          >Benefits</a
+        >
+      </li>
+      <li class="tablet-and-desktop-menu-item">
+        <a class="link tablet-and-desktop-menu-link" href="#projects"
+          >Projects</a
+        >
+      </li>
+      <li class="tablet-and-desktop-menu-item">
+        <a class="link tablet-and-desktop-menu-link" href="#faq">FAQ</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<script src="./js/header.js" type="module"></script>
