@@ -41,13 +41,13 @@
 
 @keyframes slideLine {
   0% {
-    transform: translateX(-150px);
+    transform: translateX(-50px);
   }
   50% {
-    transform: translateX(-520px);
+    transform: translateX(-420px);
   }
   100% {
-    transform: translateX(-150px);
+    transform: translateX(-50px);
   }
 }
 
