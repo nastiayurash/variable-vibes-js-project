@@ -1,16 +1,26 @@
 @font-face {
-  font-family: 'Inter Tight', serif;
-  src: url(../fonts/InterTight-Medium.ttf) format('ttf');
-  font-weight: 500;
+  font-display: swap;
+  font-family: 'Inter Tight';
   font-style: normal;
-}
-@font-face {
-  font-family: 'Inter Tight', serif;
-  src: url(../fonts/InterTight-SemiBold.ttf) format('ttf');
-  font-weight: 600;
-  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/inter-tight-v7-latin-regular.woff2') format('woff2');
 }
 
+@font-face {
+  font-display: swap;
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/inter-tight-v7-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/inter-tight-v7-latin-600.woff2') format('woff2');
+}
 *,
 *::before,
 *::after {
@@ -69,6 +79,14 @@ input {
   font-family: inherit;
 }
 
-.hidden {
-  display: none;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
