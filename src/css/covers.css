@@ -8,9 +8,7 @@
   padding-bottom: 64px;
   margin: 0 auto;
 }
-.covers-header {
-  display: none;
-}
+
 .marquee {
   max-width: 100%;
   overflow: hidden;
