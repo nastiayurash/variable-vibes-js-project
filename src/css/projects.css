@@ -204,3 +204,7 @@
     border-radius: 0 24px 24px 0;
   }
 }
+
+.scroll-button.swiper-prev {
+  transform: rotate(180deg);
+}
