@@ -1,10 +1,6 @@
 /*Mobile*/
 
 .reviews-section {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
   margin: auto;
   padding-bottom: 64px;
 }
@@ -115,9 +111,7 @@
 
 @media screen and (min-width: 768px) {
   .reviews-section {
-    width: 768px;
-    max-width: none;
-    padding-bottom: 69px;
+    padding-bottom: 96px;
   }
   .swiper-container {
     width: 704px;
