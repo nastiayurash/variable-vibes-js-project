@@ -36,12 +36,10 @@
 }
 
 .header-button:active {
-  cursor: pointer;
   background-color: #e0373f;
 }
 
 .menu-link:active {
-  cursor: pointer;
   color: #e0373f;
 }
 
