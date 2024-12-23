@@ -27,7 +27,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Inter Tight', serif;
+  font-family: 'Inter Tight', sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
