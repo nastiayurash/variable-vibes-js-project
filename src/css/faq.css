@@ -1,5 +1,5 @@
-.faq-container {
-  margin-bottom: 64px;
+.section-faq {
+  padding-bottom: 64px;
 }
 .faq-title {
   margin-bottom: 32px;
@@ -84,8 +84,8 @@
 }
 
 @media screen and (min-width: 768px) {
-  .faq-container {
-    margin-bottom: 96px;
+  .section-faq {
+    padding-bottom: 96px;
   }
 
   .faq-item {
@@ -98,8 +98,8 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .faq-container {
-    margin-bottom: 164px;
+  .section-faq {
+    padding-bottom: 164px;
   }
 
   .faq-title {
