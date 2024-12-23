@@ -7,10 +7,7 @@
     flex-direction: column;
     max-width: 375px;
     margin: auto;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 32px;
-    padding-bottom: 17px;
+    padding-bottom: 64px;
 }
 .reviews{
     font-family: "Inter Tight", sans-serif;
@@ -121,10 +118,7 @@
     .reviews-section{
         width: 768px;
         max-width: none;
-        padding-left: 32px;
-        padding-right: 32px;
-        padding-top: 48px;
-        padding-bottom: 33px;
+        padding-bottom: 69px;
     }
     .swiper-container{
         width: 704px;
@@ -155,10 +149,7 @@
     .reviews-section{
         width: 1440px;
         margin: auto;
-        padding-left: 32px;
-        padding-right: 32px;
-        padding-top: 82px;
-        padding-bottom: 67px;
+        padding-bottom: 164px;
     }
     .swiper-container {
         width: 1376px;
