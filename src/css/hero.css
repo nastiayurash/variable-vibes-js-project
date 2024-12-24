@@ -10,6 +10,10 @@
   margin-left: auto;
   margin-right: auto;
 }
+.hero-container {
+  display: flex;
+  flex-direction: column;
+}
 
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
@@ -53,9 +57,16 @@
   border: 1px solid rgba(250, 250, 250, 0.2);
   transition: border-color 300ms ease-out;
   border-radius: 60px;
-  padding: 10px;
-  width: 37px;
-  height: 37px;
+  padding: 5px;
+  width: 28px;
+  height: 28px;
+}
+@media screen and (min-width: 375px) {
+  .hero-icon-link {
+    padding: 10px;
+    width: 37px;
+    height: 37px;
+  }
 }
 
 .hero-icon-link:hover,
@@ -71,10 +82,17 @@
   gap: 10px;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
-  padding: 10px 12px;
-  width: 178px;
-  height: 37px;
+  padding: 5px;
+  width: 170px;
+  height: 28px;
   font-style: normal;
+}
+@media screen and (min-width: 375px) {
+  .hero-email {
+    padding: 10px 12px;
+    width: 178px;
+    height: 37px;
+  }
 }
 
 @media screen and (min-width: 768px) {
