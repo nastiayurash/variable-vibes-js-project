@@ -44,12 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const dataPost = {
       email: email,
-      comments: comments,
+      comment: comments,
     };
 
     try {
       const response = await fetch(
-        'https://portfolio-js.b.goit.study/api-docs',
+        'https://portfolio-js.b.goit.study/api/requests',
         {
           method: 'POST',
           headers: {
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
       );
 
       if (!response.ok) {
-        const errorData = await response.text();
+        const errorData = await response.json();
         throw new Error(errorData || 'Invalid email, try again');
       }
 
@@ -72,7 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
       openModalWithData();
       form.reset();
     } catch (error) {
-      emailSuccessMessage.textContent = error.message;
+      console.error('Error:', error.message);
+      emailSuccessMessage.textContent = 'Invalid email, try again';
       emailSuccessMessage.className = 'message error';
       emailSuccessMessage.style.display = 'block';
       emailInputForm.classList.add('error');
