@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const emailInputForm = emailInput.closest('.input-form');
   const commentsInput = document.getElementById('comments');
   const commentsInputForm = commentsInput.closest('.input-form');
+  const btnClose = document.querySelector('.window-btn');
+  const windowBackdrop = document.querySelector('.backdrop');
+  const OPEN_CLASS = 'is-open';
+  const body = document.querySelector('body');
 
   emailInput.addEventListener('input', () => {
     if (emailInput.value !== '') {
@@ -65,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
       emailSuccessMessage.style.display = 'block';
       emailInputForm.classList.add('success');
       emailInputForm.classList.remove('error');
-
+      openModalWithData();
       form.reset();
     } catch (error) {
       emailSuccessMessage.textContent = error.message;
@@ -83,4 +87,30 @@ document.addEventListener('DOMContentLoaded', () => {
       commentsInput.value = commentsInput.value.substring(0, maxLength) + '...';
     }
   });
+
+  function openModalWithData() {
+    windowBackdrop.classList.add(OPEN_CLASS);
+    body.style.overflow = 'hidden';
+  }
+
+  btnClose.addEventListener('click', () => {
+    closeWindow();
+  });
+
+  windowBackdrop.addEventListener('click', event => {
+    if (event.target === windowBackdrop) {
+      closeWindow();
+    }
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      closeWindow();
+    }
+  });
+
+  function closeWindow() {
+    windowBackdrop.classList.remove(OPEN_CLASS);
+    document.body.style.overflow = 'auto';
+  }
 });
