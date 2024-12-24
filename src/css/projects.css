@@ -56,6 +56,12 @@
   margin-bottom: 32px;
   margin-top: 96px;
 }
+@media screen and (min-width: 375px) {
+  .projects-text {
+    font-size: 24px;
+  }
+}
+
 .projects-link-button {
   display: flex;
   align-items: center;
