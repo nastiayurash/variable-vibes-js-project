@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const emailSuccessMessage = document.getElementById('emailSuccessMessage');
   const emailInputForm = emailInput.closest('.input-form');
   const commentsInput = document.getElementById('comments');
-  const commentsInputForm = commentsInput.closest('.input-form');
   const btnClose = document.querySelector('.window-btn');
   const windowBackdrop = document.querySelector('.backdrop');
   const OPEN_CLASS = 'is-open';
@@ -21,6 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   commentsInput.addEventListener('input', () => {
+    const maxLength = 50;
+
+    if (commentsInput.value.length > maxLength) {
+      commentsInput.value = commentsInput.value.substring(0, maxLength) + '...';
+    }
+
     if (commentsInput.value !== '') {
       commentsInput.style.color = '#fafafa';
       commentsInput.style.borderBottomColor = '#fafafa';
@@ -35,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const formData = new FormData(form);
     const email = formData.get('email');
-
     let comments = formData.get('comments');
 
     if (comments.length > 50) {
@@ -61,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!response.ok) {
         const errorData = await response.json();
+        console.error('Server error:', errorData);
         throw new Error(errorData || 'Invalid email, try again');
       }
 
@@ -72,20 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
       openModalWithData();
       form.reset();
     } catch (error) {
-      console.error('Error:', error.message);
       emailSuccessMessage.textContent = 'Invalid email, try again';
       emailSuccessMessage.className = 'message error';
       emailSuccessMessage.style.display = 'block';
       emailInputForm.classList.add('error');
       emailInputForm.classList.remove('success');
-    }
-  });
-
-  commentsInput.addEventListener('input', () => {
-    const maxLength = 50;
-
-    if (commentsInput.value.length > maxLength) {
-      commentsInput.value = commentsInput.value.substring(0, maxLength) + '...';
     }
   });
 
@@ -113,5 +109,11 @@ document.addEventListener('DOMContentLoaded', () => {
   function closeWindow() {
     windowBackdrop.classList.remove(OPEN_CLASS);
     document.body.style.overflow = 'auto';
+
+    emailSuccessMessage.textContent = '';
+    emailInputForm.classList.remove('success');
+    emailInputForm.classList.remove('error');
+    emailInput.style.color = '';
+    emailInput.style.borderBottomColor = '';
   }
 });
