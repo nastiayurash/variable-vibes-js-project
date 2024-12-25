@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
       
       if (isOpen) {
         content.style.maxHeight = '0';
-        icon.querySelector('use').setAttribute('href', '/src/img/icons.svg#icon-arrow-bot');
+        icon.querySelector('use').setAttribute('href', '/web-force-team-js-project/img/icons.svg#icon-arrow-bot');
       } else {
         content.style.maxHeight = '1000px';
-        icon.querySelector('use').setAttribute('href', '/src/img/icons.svg#icon-arrow-top');
+        icon.querySelector('use').setAttribute('href', '/web-force-team-js-project/img/icons.svg#icon-arrow-top');
       }
     });
   });
