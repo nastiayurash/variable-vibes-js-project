@@ -1,33 +1,35 @@
 import Accordion from 'accordion-js';
 document.addEventListener('DOMContentLoaded', function () {
   const accordionItems = document.querySelectorAll('.about-me-list-item');
-  if (accordionItems.length > 0) {
-    accordionItems[0].querySelector('.about-me-description').style.display =
-      'block';
-  }
   accordionItems.forEach((item, index) => {
     const button = item.querySelector('.about-me-button');
     const content = item.querySelector(
       '.about-me-description, .item-description'
     );
-    if (index > 0) {
-      content.style.display = 'none';
+    content.style.overflow = 'hidden';
+    content.style.transition = 'max-height 0.3s ease-out'; 
+    if (index === 0) {
+      content.style.maxHeight = '1000px'; 
+    } else {
+      content.style.maxHeight = '0';
     }
     button.addEventListener('click', function () {
-      const isOpen = content.style.display === 'block';
+      const isOpen = content.style.maxHeight !== '0px';
       if (isOpen) {
-        content.style.display = 'none';
+        content.style.maxHeight = '0';
         button.querySelector('.about-me-icon').classList.remove('open');
       } else {
-        content.style.display = 'block';
+        content.style.maxHeight = '1000px'; 
         button.querySelector('.about-me-icon').classList.add('open');
       }
     });
   });
 });
 
+
 import Swiper from 'swiper';
 import 'swiper/css/bundle';
+
 const swiper = new Swiper('#swiperLibrary', {
   slidesPerView: 'auto',
   loop: true,
@@ -60,4 +62,15 @@ swiper.el.addEventListener(
   },
   { passive: true }
 );
-
+swiper.el.addEventListener(
+  'wheel',
+  function (e) {
+    e.preventDefault();
+    if (e.deltaY > 0) {
+      swiper.slideNext();
+    } else {
+      swiper.slidePrev();
+    }
+  },
+  { passive: false }
+);

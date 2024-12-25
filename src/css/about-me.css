@@ -1,7 +1,6 @@
 :root {
     --Animation_arrow: 700ms cubic-bezier(0.4, 0, 0.2, 1);
     --Animation_cubic: 300ms ease-in-out;
-    --Main_text: #333;
     --Button_background: #ff4b5c;
     --Opacity_20: rgba(0, 0, 0, 0.2);
     --Cards: #f9f9f9;
@@ -9,25 +8,25 @@
     --Button_text: #fff;
     --Main_content_bg: #242527;
 }
+.about-me {
+    padding-bottom: 64px;
+}
+
+@media only screen and (min-width: 768px) {
+    .about-me {
+        padding-bottom: 96px;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    .about-me {
+        padding-bottom: 159px;
+    }
+}
 .color-text-red {
     color: #ed3b44;
 }
 .color-text-gray {
     color: #7a7a7b;
-}
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-* {
-    font-family: "Inter Tight", sans-serif;
 }
 .about-me {
     padding-top: 64px;
@@ -45,18 +44,18 @@
         padding-bottom: 96px;
     }
 }
-.container {
+.describe-container {
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
 @media only screen and (min-width: 768px) {
-    .container {
+    .describe-container {
         gap: 64px;
     }
 }
 @media only screen and (min-width: 1440px) {
-    .container {
+    .describe-container {
         gap: 96px;
     }
 }
@@ -69,7 +68,6 @@
     .about-me-wrapper-content {
         flex-direction: row;
     }
-
     .about-me-wrapper-content>div {
         width: calc((100% - 16px) / 2);
     }
@@ -90,27 +88,23 @@
     }
 }
 .about-me-main-header {
-    font-weight: 500;
     font-size: 24px;
+    font-weight: 500;
     line-height: 1.16667;
     letter-spacing: -0.03em;
     text-transform: uppercase;
-    color: #fafafa;
 }
 @media only screen and (min-width: 768px) {
     .about-me-main-header {
         font-size: 38px;
-        line-height: 1.05263;
     }
 }
 @media only screen and (min-width: 1440px) {
     .about-me-main-header {
         font-size: 38px;
-        line-height: 1.05263;
     }
 }
 .about-me-paragraph {
-    font-size: 16px;
     color: var(--Button_text);
    padding: 0;
 }
@@ -148,7 +142,6 @@
 .about-me-button {
     width: 36px;
     height: 36px;
-    color: var(--Main_text);
     border-radius: 100px;
    border: 1px solid rgba(250, 250, 250, 0.2);
 }
@@ -220,12 +213,14 @@
 }
 @media only screen and (min-width: 1440px) {
     .about-me-description,
-    .about-me-description ul {
+    .about-me-description ul,
+    .item-description {
         align-items: flex-end;
         padding-right: 68px;
     }
     .about-me-paragraph,
-    .about-me-description ul>li {
+    .about-me-description ul>li,
+    .item-description li {
         width: 612px;
     }
 }
@@ -243,7 +238,7 @@
 }
 .about-me-list-skills.swiper-wrapper {
     display: flex;
-    width: 260px;
+width: 100%;
 }
 .about-me-list-skills-item.swiper-slide {
     width: 130px;
@@ -263,7 +258,7 @@
         gap: 64px;
     }
     .about-me-list-skills.swiper-wrapper {
-        width: 600px;
+        width: 100%;
     }
     .about-me-list-skills-item.swiper-slide {
         width: 200px;
@@ -275,12 +270,10 @@
         gap: 72px;
     }
     .about-me-list-skills.swiper-wrapper {
-        width: 1200px;
+    width: 100%;
     }
 }
 .about-me-list-skills-item {
-    font-weight: 500;
-    letter-spacing: -0.02em;
     color: #fafafa;
     display: flex;
     align-items: center;
@@ -290,7 +283,6 @@
 @media only screen and (max-width: 767px) {
     .about-me-list-skills-item {
         font-size: 16px;
-        line-height: 1.5;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1439px) {
@@ -304,88 +296,43 @@
     }
 }
 .about-me-section-title {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
+ text-transform: uppercase;
     color: rgba(250, 250, 250, 0.4);
     transition: color var(--Animation_arrow);
 }
 .about-me-section-title.active {
     color: var(--Button_background);
 }
-
 @media only screen and (min-width: 1440px) {
     .about-me-description p {
-        font-weight: 500;
         font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: -0.02em;
-        color: #fafafa;
     }
-
     .about-me-list-item {
         gap: 32px;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1439px) {
     .about-me-description p {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: -0.02em;
-        color: #fafafa;
         margin-bottom: 10px;
+        font-size: 16px;
     }
-
     .about-me-list-item {
         gap: 16px;
     }
 }
 @media only screen and (max-width: 767px) {
-    .about-me-description p {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: -0.02em;
-        color: #fafafa;
-    }
     .about-me-list-item {
         gap: 32px;
     }
 }
 .item-description {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 0 auto;
-    padding-right: 68px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  overflow: hidden;
 }
-.item-description p {
-    font-size: 16px;
-    color: var(--Button_text);
-    padding: 0;
-    margin-bottom: 32px;
-}
-@media (min-width: 768px) {
-    .item-description {
-        max-width: 700px;
-        gap: 16px;
-    }
-    .item-description p {
-        font-size: 20px;
-    }
-}
-@media (min-width: 1440px) {
-    .item-description {
-        max-width: 900px;
-        gap: 10px;
-    }
-    .item-description p {
-        width: 612px;
-    }
-}
+
 #swiperLibrary {
     overflow: hidden;
 }
