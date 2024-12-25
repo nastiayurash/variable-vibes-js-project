@@ -112,9 +112,9 @@
     border: none;
 
     background-color: transparent;
-    padding: 0 18px;
+
     line-height: 0;
-    right: -108px;
+    right: 0;
   }
   .menu-close-btn {
     stroke: #fafafa;
