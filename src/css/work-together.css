@@ -148,7 +148,6 @@
 .contact {
   display: flex;
   width: 300px;
-  overflow: hidden;
 }
 
 .contacts-list {
