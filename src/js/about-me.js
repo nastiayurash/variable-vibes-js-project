@@ -5,31 +5,25 @@ import 'swiper/css/bundle';
 import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
 document.addEventListener('DOMContentLoaded', function () {
- 
   const accordionItems = document.querySelectorAll('.about-me-list-item');
 
   accordionItems.forEach((item, index) => {
     const button = item.querySelector('.about-me-button');
     const content = item.querySelector('.about-me-description, .item-description');
-    const icon = button.querySelector('.about-me-icon'); 
+    const icon = button.querySelector('.about-me-icon');
 
-    
     content.style.overflow = 'hidden';
     content.style.transition = 'max-height 0.3s ease-out';
     content.style.maxHeight = index === 0 ? '1000px' : '0';
 
-   
     button.addEventListener('click', function () {
       const isOpen = content.style.maxHeight !== '0px';
 
-      
-      if (isOpen) {
-        content.style.maxHeight = '0';
-        icon.querySelector('use').setAttribute('href', './src/img/icons.svg#icon-arrow-bot');
-      } else {
-        content.style.maxHeight = '1000px';
-        icon.querySelector('use').setAttribute('href', './src/img/icons.svg#icon-arrow-top');
-      }
+      // Toggle the 'is-active' class
+      item.classList.toggle('is-active', !isOpen);
+
+      // Toggle max-height for the accordion content
+      content.style.maxHeight = isOpen ? '0' : '1000px';
     });
   });
 
@@ -69,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const swipeButton = document.querySelector('.button-swipe');
 
-   
     if (swipeButton) {
       swipeButton.addEventListener('click', () => {
         swiperLibrary.slideNext();
@@ -149,6 +142,5 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
- 
   doSwipe();
 });

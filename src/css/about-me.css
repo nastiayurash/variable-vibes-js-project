@@ -336,3 +336,14 @@
     width: 1200px;
   }
 }
+/* Default icon (closed state) */
+.about-me-list-item .about-me-icon use {
+  transition: transform 0.3s ease;
+}
+
+.about-me-list-item.is-active .about-me-icon use {
+  /* Change the icon when the accordion is open */
+  transform: rotate(
+    180deg
+  ); /* This can rotate the icon if it's a triangle, for example */
+}
