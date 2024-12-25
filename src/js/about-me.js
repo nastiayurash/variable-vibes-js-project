@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
   accordionItems.forEach((item, index) => {
     const button = item.querySelector('.about-me-button');
     const content = item.querySelector('.about-me-description, .item-description');
-    const icon = button.querySelector('.about-me-icon'); // SVG icon
+    const icon = button.querySelector('.about-me-icon'); 
 
     
     content.style.overflow = 'hidden';
@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
       
       if (isOpen) {
         content.style.maxHeight = '0';
-        icon.querySelector('use').setAttribute('href', '../img/icons.svg#icon-arrow-bot');
+        icon.querySelector('use').setAttribute('href', './img/icons.svg#icon-arrow-bot');
       } else {
         content.style.maxHeight = '1000px';
-        icon.querySelector('use').setAttribute('href', '../img/icons.svg#icon-arrow-top');
+        icon.querySelector('use').setAttribute('href', './img/icons.svg#icon-arrow-top');
       }
     });
   });
