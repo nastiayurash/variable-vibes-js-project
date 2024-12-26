@@ -1,4 +1,3 @@
-
 import Accordion from 'accordion-js';
 import Swiper from 'swiper';
 import 'swiper/css/bundle';
@@ -14,20 +13,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
     content.style.overflow = 'hidden';
     content.style.transition = 'max-height 0.3s ease-out';
-    content.style.maxHeight = index === 0 ? '1000px' : '0';
+    icon.style.transition = 'transform 0.3s ease';
+
+   
+    if (index === 0) {
+      content.style.maxHeight = '1000px';
+      icon.style.transform = 'rotate(180deg)';
+      item.classList.add('is-active');
+    } else {
+      content.style.maxHeight = '0';
+      icon.style.transform = 'rotate(0deg)';
+    }
 
     button.addEventListener('click', function () {
       const isOpen = content.style.maxHeight !== '0px';
 
-      // Toggle the 'is-active' class
-      item.classList.toggle('is-active', !isOpen);
+      
+      accordionItems.forEach((otherItem) => {
+        const otherContent = otherItem.querySelector('.about-me-description, .item-description');
+        const otherIcon = otherItem.querySelector('.about-me-icon');
+        otherContent.style.maxHeight = '0';
+        otherIcon.style.transform = 'rotate(0deg)';
+        otherItem.classList.remove('is-active');
+      });
 
-      // Toggle max-height for the accordion content
-      content.style.maxHeight = isOpen ? '0' : '1000px';
+      
+      if (!isOpen) {
+        content.style.maxHeight = '1000px';
+        icon.style.transform = 'rotate(180deg)';
+        item.classList.add('is-active');
+      }
     });
   });
 
-  function doSwipe() {
+  function initializeSwiper() {
     const swiperLibrary = new Swiper('#swiperLibrary', {
       modules: [Navigation, Keyboard, Mousewheel],
       keyboard: {
@@ -142,5 +161,5 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  doSwipe();
+  initializeSwiper();
 });
