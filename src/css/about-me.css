@@ -337,11 +337,11 @@
   }
 }
 /* Default icon (closed state) */
-.about-me-list-item .about-me-icon use {
+.about-me-button .about-me-icon use {
   transition: transform 0.3s ease;
 }
 
-.about-me-list-item.is-active .about-me-icon use {
+.about-me-button.is-active .about-me-icon use {
   /* Change the icon when the accordion is open */
   transform: rotate(
     180deg
