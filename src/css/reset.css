@@ -26,6 +26,10 @@
 *::after {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter Tight', sans-serif;
   font-size: 16px;
@@ -62,7 +66,6 @@ h2,
 h3,
 p {
   margin-top: 0;
-  
 }
 ul,
 ol {
